@@ -50,6 +50,8 @@
   tmp <- gsub('<code class="reqn">(.*?)</code>', '\\$\\1\\$', tmp)
 
   # title
+  # warning: Undefined global functions or variables: title
+  title <- NULL
   funname = tools::file_path_sans_ext(basename(source_file))
   if (!is.null(title)) {
     tmp = tmp[!grepl("h1", tmp)]
